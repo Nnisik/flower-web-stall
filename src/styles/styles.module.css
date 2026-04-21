@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color: #242424;
+    background-color: rgba(255, 255, 255, 0.87);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5vh;
+    width: 95vw;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 2px solid #242424;
+    position: fixed;
+    background-color: rgba(255, 255, 255);
+}
+
+.logo {
+    font-size: 2.5em;
+    margin: auto 0.5em;
+    line-height: 100%;
+
+    font-family: "Oi", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.nav {
+    font-size: 1.2em;
+    margin: auto 0.5em;
+    display: flex;
+    gap: 2em;
+
+    & a {
+        font-size: 1.25em;
+        color: #242424;
+        text-decoration: none;
+        transition-duration: 0.3s;
+    }
+
+    & a:hover {
+        font-weight: bold;
+        color: black;
+    }
+
+    & a:checked {
+        color: black;
+    }
+}
+
+.startPage {
+    margin-top: 24vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.startPage_logo {
+    font-size: 12em;
+    text-align: center;
+    letter-spacing: 0.5em;
+    margin: 0 auto 24px;
+    line-height: 100%;
+
+    font-family: "Oi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.startPage_promo_image {
+    background-image: url("../assets/images/vecteezy_top-view-of-purple-vanda-orchid-flower-in-the-bouquet-ready_14035317.jpg");
+    image-rendering: pixelated;
+    object-fit: scale-down;
+    width: 90vw;
+    aspect-ratio: 17/8;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.aboutSection {
+    width: fit-content;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutSection_subheader {
+    font-size: 1.25em;
+    font-weight: 1000;
+    color: #888888;
+    margin-bottom: 12px;
+}
+
+.aboutSection_text{
+    font-size: 2em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.aboutSection_linkBtn {
+    background: darksalmon;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-decoration: none;
+    margin: 1em 0;
+    padding: 0.1em 1em;
+    color: #242424;
+}
