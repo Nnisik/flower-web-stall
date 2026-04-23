@@ -5,8 +5,8 @@ const OrdersHistorySection = () => {
         <div>
             <h3>Orders history</h3>
             <div>
-                <PrevOrder orderID={2} date={"09.04.2026"} price={0} />
-                <PrevOrder orderID={1} date={"07.04.2026"} price={0} />
+                <PrevOrder id={2} orderDate={"09.04.2026"} price={0} />
+                <PrevOrder id={1} orderDate={"07.04.2026"} price={0} />
             </div>
         </div>
     );
