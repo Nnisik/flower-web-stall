@@ -1,6 +1,7 @@
 import styles from "../../styles/styles.module.css";
 import Card from "../../components/Card.tsx";
 import CardProps from "../../types/CardProps";
+import {capitaliseText} from "../../utils/capitaliseText.ts";
 
 const ProductGalleryGrid = () => {
     const items:CardProps[] = [{

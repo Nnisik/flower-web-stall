@@ -1,20 +1,16 @@
-import ActiveOrder from "./ActiveOrder.tsx";
+import styles from "../styles/styles.module.css";
+import EmptyOrderList from "../features/profile/EmptyOrderList.tsx";
+import OrderLIst from "../features/profile/OrderLIst.tsx";
+import OrderProps from "../types/OrderProps";
+import {FC} from "react";
 
-const ActiveOrdersList = () => {
+const ActiveOrdersList: FC<OrderProps[]> = (props) => {
+    const isOrderListEmpty: boolean = props.length !== 0;
+
     return (
-        <div>
+        <div className={styles.orderSection}>
             <h3>Active orders</h3>
-            <div>
-                <p>You don't have any active orders</p>
-                <div>
-                    <button>Catalog</button>
-                    <button>Bucket</button>
-                </div>
-            </div>
-            <div>
-                <ActiveOrder id={2} orderDate={"09.04.2026"} price={0} />
-                <ActiveOrder id={1} orderDate={"07.04.2026"} price={0} />
-            </div>
+            {isOrderListEmpty ? (<EmptyOrderList/>) : (<OrderLIst/>)}
         </div>
     );
 }

@@ -260,3 +260,95 @@
     color: #efebeb;
     padding: 0 24px;
 }
+
+.userInfoSection {
+    padding-top: 3em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    & div {
+        display: flex;
+        width: 100%;
+    }
+
+    & section {
+        height: fit-content;
+        line-height: 100%;
+        margin: 24px;
+    }
+
+    & h2 {
+        font-size: 2em;
+    }
+
+    & p {
+        font-size: 1.25em;
+    }
+
+    & img {
+        height: 150px;
+        aspect-ratio: 1/1;
+        border-radius: 24px;
+        background: blueviolet;
+    }
+
+    & button {
+        font-size: 1em;
+        height: 50px;
+        aspect-ratio: 16/9;
+        transition-duration: 0.3s;
+        border-radius: 6px;
+        margin: 6px 12px;
+
+        &:hover {
+            font-size: 1.25em;
+        }
+    }
+}
+
+.orderSection {
+    margin: 2em 0 4em;
+
+    & h3 {
+        font-size: calc(2em - 30%);
+    }
+
+    & > div {
+        border-top: 1px solid #888888;
+        border-bottom: 1px solid #888888;
+
+        display: flex;
+        gap: 1.5em;
+        padding: 12px;
+    }
+}
+
+.order {
+    width: 300px;
+    aspect-ratio: 20/9;
+    padding: 12px;
+    border: 1px solid #efebeb;
+    transition-duration: 0.3s;
+    border-radius: 12px;
+
+    &:hover {
+        border: 1px solid #888888;
+    }
+}
+
+.emptyOrderList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 ;
+
+    & p {
+        line-height: 100%;
+    }
+    & div {
+        display: flex;
+        gap: 3em;
+    }
+}
