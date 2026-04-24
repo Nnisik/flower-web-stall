@@ -1,3 +1,4 @@
 export default interface GalleryProps {
-    header: string
+    header: string,
+    type?: 'product' | 'service'
 }
