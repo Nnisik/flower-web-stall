@@ -28,12 +28,12 @@ If you are developing a production application, we recommend updating the config
 
 
 ### TODO
-- [] split CSS code into modules
-- [] add SCSS preprocessors (SaSS or PostCSS)
-- [] get rid of "hard coded data" -> include API and mock backend
-- [] HOOKS
-- [] include cart
-- [] Zustand
-- [] testing
-- [] write a clean README-file
-- [] deploy
+- [ ] split CSS code into modules
+- [ ] add SCSS preprocessors (SaSS or PostCSS)
+- [ ] get rid of "hard coded data" -> include API and mock backend
+- [ ] HOOKS
+- [ ] include cart
+- [ ] Zustand
+- [ ] testing
+- [ ] write a clean README-file
+- [ ] deploy
