@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useEffect, useState} from "react";
 import styles from "../../styles/styles.module.css";
 import GalleryProps from "../../types/GalleryProps";
 import ProductGalleryGrid from "./ProductGalleryGrid.tsx";
@@ -6,7 +6,18 @@ import ServiceGalleryGrid from "./ServiceGalleryGrid.tsx";
 
 const Gallery:FC<GalleryProps> = (props) => {
     const isProductGallery:boolean = props.type == 'product';
-    console.log(isProductGallery);
+
+    const [galleryData, setGalleryData] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch('');
+            const data = await response.json();
+            setGalleryData(data);
+        }
+
+        fetchData()
+    }, [data])
 
     return (
         <section className={styles.gallery}>

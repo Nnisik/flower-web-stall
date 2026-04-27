@@ -1,9 +1,10 @@
 import styles from "../../styles/styles.module.css";
 import Card from "../../components/Card.tsx";
 import CardProps from "../../types/CardProps";
-import {capitaliseText} from "../../utils/capitaliseText.ts";
+import {FC} from "react";
+import GalleryProps from "../../types/GalleryProps";
 
-const ProductGalleryGrid = () => {
+const ProductGalleryGrid:FC<GalleryProps> = (props) => {
     const items:CardProps[] = [{
         text: "Dawn Bloom",
         price: 55
@@ -33,9 +34,11 @@ const ProductGalleryGrid = () => {
         price: 250
     }];
 
+    const galleryContent = props.
+
     return (
         <div className={styles.galleryGrid}>
-            {items.map((item) => (
+            {props.data.map((item) => (
                 <Card text={item.text} price={item.price} />
             ))}
         </div>

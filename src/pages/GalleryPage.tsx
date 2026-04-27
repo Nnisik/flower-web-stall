@@ -2,8 +2,10 @@ import styles from "../styles/styles.module.css";
 
 import MiniTextSection from "../components/MiniTextSection.tsx";
 import Gallery from "../features/gallery/Gallery.tsx";
+import {useState} from "react";
 
 const GalleryPage = () => {
+
     return (
         <div className={styles.pageContent}>
             <h2>Gallery</h2>

@@ -33,7 +33,7 @@ If you are developing a production application, we recommend updating the config
 - [ ] get rid of "hard coded data" -> include API and mock backend
 - [ ] HOOKS
 - [ ] include cart
-- [ ] Zustand
+- [x] Zustand
 - [ ] testing
 - [ ] write a clean README-file
 - [ ] deploy

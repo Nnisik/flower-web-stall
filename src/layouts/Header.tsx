@@ -1,6 +1,6 @@
 import styles from "../styles/styles.module.css";
-
 import Navigation from "./Navigation.tsx";
+import CartButton from "../features/shopping cart/CartButton.tsx";
 
 const Header = () => {
 
@@ -9,7 +9,10 @@ const Header = () => {
             <h1 className={styles.logo}>
                 <a href={"/"}>Logo</a>
             </h1>
-            <Navigation />
+            <div>
+                <Navigation />
+                <CartButton />
+            </div>
         </header>
     );
 }

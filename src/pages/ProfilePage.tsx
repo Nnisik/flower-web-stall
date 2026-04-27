@@ -3,9 +3,20 @@ import ActiveOrdersList from "../components/ActiveOrdersList.tsx";
 import styles from "../styles/styles.module.css";
 import ProfileInfoSecrion from "../features/profile/ProfileInfoSecrion.tsx";
 import OrderProps from "../types/OrderProps";
+import {useEffect, useState} from "react";
 
 const ProfilePage = () => {
-    const orderList:OrderProps[] = [];
+    const [orderList, setOrderList]:OrderProps[] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch('');
+            const data = await response.json();
+            setOrderList(data);
+        }
+
+        fetchData();
+    }, [props.someProp])
 
     return (
         <div className={styles.pageContent}>
