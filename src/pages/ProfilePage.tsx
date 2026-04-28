@@ -6,8 +6,11 @@ import OrderProps from "../types/OrderProps";
 import {useEffect, useState} from "react";
 
 const ProfilePage = () => {
+    // TODO: add mock backend
     const [orderList, setOrderList]:OrderProps[] = useState([]);
 
+    // TODO: add mock backend
+    // TODO: create normal API-call to mack api
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch('');

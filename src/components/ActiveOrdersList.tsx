@@ -11,7 +11,10 @@ const ActiveOrdersList: FC<OrderProps[]> = (props) => {
     return (
         <div className={styles.orderSection}>
             <h3>Active orders</h3>
-            {isOrderListEmpty ? (<EmptyOrderList/>) : (<OrderLIst/>)}
+            {isOrderListEmpty
+                ? <EmptyOrderList/>
+                : <OrderLIst/>
+            }
         </div>
     );
 }

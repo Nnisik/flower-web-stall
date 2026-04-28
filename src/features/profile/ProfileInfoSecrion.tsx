@@ -2,6 +2,7 @@ import styles from "../../styles/styles.module.css";
 import {FC} from "react";
 import UserProps from "../../types/UserProps";
 
+// TODO: add mock user
 const ProfileInfoSection:FC<UserProps> = (props) => {
     return (
         <div className={styles.userInfoSection}>

@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import ProductProp from "../../types/ProductProp.ts";
+import ProductProp from "../types/ProductProp.ts";
 
 const InitialState = {items: [],
     totalItems: 0,
@@ -8,9 +8,8 @@ const InitialState = {items: [],
 
 interface ICartState {
     items: ProductProp[];
-    totalItems: number;
-    fullPrice: number;
-    addItem: (elem:ProductProp) => void;
+
+    addItem: (elem: ProductProp) => void;
     removeItem: (id: number) => void;
     empty: () => void;
 }
@@ -18,8 +17,6 @@ interface ICartState {
 export const useCartStore = create<ICartState>((set) => {
     return {
         items: [],
-        totalItems: 0,
-        fullPrice: 0,
 
         addItem: (item:ProductProp) =>
             set((state: ICartState) => ({

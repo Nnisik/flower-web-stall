@@ -1,40 +1,14 @@
-import {useCartStore} from "../../store/cart/useCart.ts";
-import {FC} from "react";
-import ProductProp from "../../types/ProductProp.ts";
+import {useCartStore} from "../../store/useCartStore.ts";
 import styles from "../../styles/styles.module.css";
-
-const CartItem:FC<ProductProp> = (props) => {
-    return (
-        <div key={props.id}>
-            <h3>{props.name}</h3>
-            <p>{props.price}</p>
-        </div>
-    );
-}
-
-const EmptyCardMessage = () => {
-    return (
-        <></>
-    );
-}
-
-const CartList = () => {
-    const cart = useCartStore((s) => s.items);
-
-    return (
-        <div>
-            {cart.map(item => {
-                return <CartItem id={item.id} name={item.name} price={item.price}/>
-            })}
-        </div>
-    );
-}
+import CartList from "./CartList.tsx";
+import EmptyCardMessage from "./EmptyCardMessage.tsx";
 
 const CartModal = () => {
-    const numberCartItems = useCartStore((s) => s.totalItems);
+    const numberCartItems = useCartStore((s) => s.items.length);
 
     return (
         <div className={styles.cartModalWindow}>
+            <h1>Cart</h1>
             {numberCartItems === 0
                 ? <EmptyCardMessage />
                 : <CartList />
@@ -44,3 +18,4 @@ const CartModal = () => {
 }
 
 export default CartModal;
+// TODO: split components into diff files

@@ -1,5 +1,4 @@
 import {FC} from "react";
-
 import styles from "../styles/styles.module.css";
 import TextSectionProps from "../types/TextSectionProps";
 

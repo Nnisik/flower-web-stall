@@ -198,7 +198,12 @@
 .card {
     border: 1px solid transparent;
 
-    & img {
+    & > div > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & > img {
         border-radius: 12px;
         background: green;
     }
@@ -207,7 +212,7 @@
 .galleryGrid {
     width: 80%;
     display: grid;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 1.5em;
 
     & .card {
@@ -368,4 +373,25 @@
     &:hover {
         transform: scale(1.2);
     }
+}
+
+.cartModalWindow {
+    aspect-ratio: 3/4;
+    width: 400px;
+    background: #efebeb;
+    position: absolute;
+    z-index: 100;
+    top: 2.25em;
+    right: 2.25em;
+    border-radius: 24px;
+    padding: 0 24px;
+
+    & > div {
+        border: 1px solid #888888;
+        height: 415px;
+        border-radius: 12px;
+    }
+}
+
+.cardModal_emptyMessageContainer {
 }
