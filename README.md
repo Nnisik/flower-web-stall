@@ -32,7 +32,7 @@ If you are developing a production application, we recommend updating the config
 - [ ] add SCSS preprocessors (SaSS or PostCSS)
 - [ ] get rid of "hard coded data" -> include API and mock backend
 - [ ] HOOKS
-- [ ] include cart
+- [x] include shopping cart
 - [x] Zustand
 - [ ] testing
 - [ ] write a clean README-file
