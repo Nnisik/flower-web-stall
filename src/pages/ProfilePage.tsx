@@ -1,8 +1,7 @@
 import OrdersHistorySection from "../features/profile/OrdersHistory.tsx";
 import ActiveOrdersList from "../components/ActiveOrdersList.tsx";
-import styles from "../styles/styles.module.css";
+import styles from "../styles/Profile.module.css";
 import ProfileInfoSecrion from "../features/profile/ProfileInfoSecrion.tsx";
-import OrderLIst from "../features/profile/OrderLIst.tsx";
 
 const ProfilePage = () => {
     // TODO: add mock backend

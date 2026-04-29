@@ -1,9 +1,9 @@
 // TODO: create normal component
-import styles from "../../styles/styles.module.css";
+import styles from "../../styles/Cart.module.css";
 
 const EmptyCardMessage = () => {
     return (
-        <div className={styles.cardModal_emptyMessageContainer}></div>
+        <div className={styles.emptyMessage}></div>
     );
 }
 

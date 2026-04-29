@@ -1,0 +1,45 @@
+.section {
+    padding-top: 3em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    & div {
+        display: flex;
+        width: 100%;
+    }
+
+    & section {
+        height: fit-content;
+        line-height: 100%;
+        margin: 24px;
+    }
+}
+
+.header {
+    font-size: 2em;
+}
+
+.text {
+    font-size: 1.25em;
+}
+
+.image {
+    height: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 24px;
+    background: blueviolet;
+}
+
+.button {
+    font-size: 1em;
+    height: 50px;
+    aspect-ratio: 16/9;
+    transition-duration: 0.3s;
+    border-radius: 6px;
+    margin: 6px 12px;
+
+    &:hover {
+        font-size: 1.25em;
+    }
+}

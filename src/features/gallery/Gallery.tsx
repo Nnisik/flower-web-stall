@@ -1,5 +1,5 @@
 import {FC} from "react";
-import styles from "../../styles/styles.module.css";
+import styles from "../../styles/Gallery.module.css";
 import GalleryProps from "../../types/GalleryProps";
 import ProductGalleryGrid from "./ProductGalleryGrid.tsx";
 import ServiceGalleryGrid from "./ServiceGalleryGrid.tsx";

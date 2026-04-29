@@ -1,5 +1,5 @@
 import {FC} from "react";
-import styles from "../styles/styles.module.css";
+import styles from "../styles/Gallery.module.css";
 import CardProps from "../types/CardProps";
 import CartButton from "../features/gallery/CartButton.tsx";
 

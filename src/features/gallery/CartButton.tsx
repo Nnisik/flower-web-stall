@@ -1,5 +1,5 @@
 import file from "../../assets/images/svg/cart-svgrepo-com.svg"
-import styles from "../../styles/styles.module.css";
+import styles from "../../styles/Cart.module.css";
 import {FC} from "react";
 import CardProps from "../../types/CardProps";
 import ProductProp from "../../types/ProductProp.ts";
@@ -25,7 +25,7 @@ const CartButton:FC<ICartButtonProps> = (props) => {
     }
 
     return (
-        <button className={styles.cartButton} onClick={handleClick}>
+        <button className={styles.button} onClick={handleClick}>
             <img src={file} alt={"Cart logo"} />
         </button>
     );

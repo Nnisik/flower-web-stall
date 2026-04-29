@@ -1,12 +1,12 @@
-import styles from "../../styles/styles.module.css";
-import {Link} from "react-router-dom";
+import styles from "../../styles/Order.module.css";
+import LinkComp from "../../components/LinkC.tsx";
 
 const EmptyOrderList = () => {
     return (
-        <div className={styles.emptyOrderList}>
-            <p>You don't have any active orders</p>
+        <div className={styles.emptyList}>
+            <p className={styles.emptyList_text}>You don't have any active orders</p>
             <div>
-                <Link className={styles.navLink} to={"/gallery"}>Gallery</Link>
+                <LinkComp to={"/gallery"} text={"Gallery"} />
             </div>
         </div>
     );

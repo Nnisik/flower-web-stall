@@ -1,11 +1,11 @@
-import styles from "../styles/styles.module.css";
-import {Link} from "react-router-dom";
+import styles from "../styles/Header.module.css";
+import LinkComp from "../components/LinkC.tsx";
 
 const Navigation = () => {
     return (
         <nav className={styles.nav}>
-            <Link className={styles.navLink} to={"/gallery"}>Gallery</Link>
-            <Link className={styles.navLink} to={"/profile"}>Profile</Link>
+            <LinkComp to={"/gallery"} text={"Gallery"} />
+            <LinkComp to={"/profile"} text={"Profile"} />
         </nav>
     )
 }

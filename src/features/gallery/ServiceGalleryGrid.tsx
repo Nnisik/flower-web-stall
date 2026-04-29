@@ -1,4 +1,4 @@
-import styles from "../../styles/styles.module.css";
+import styles from "../../styles/Gallery.module.css";
 import ServiceCard from "../../components/ServiceCard.tsx";
 import CardProps from "../../types/CardProps";
 
@@ -15,7 +15,7 @@ const ServiceGalleryGrid = () => {
     }];
 
     return (
-        <div className={styles.galleryGrid_service}>
+        <div className={styles.grid_service}>
             {items.map((item) => (
                 <ServiceCard text={item.text} description={item.description} />
             ))}

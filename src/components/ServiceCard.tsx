@@ -1,6 +1,6 @@
 import {FC} from "react";
 import CardProps from "../types/CardProps";
-import styles from "../styles/styles.module.css";
+import styles from "../styles/Gallery.module.css";
 
 const ServiceCard:FC<CardProps> = (props) => {
     return (

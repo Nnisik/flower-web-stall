@@ -1,0 +1,47 @@
+.section {
+    margin: 2em 0 4em;
+
+    & > div {
+        border-top: 1px solid #888888;
+        border-bottom: 1px solid #888888;
+
+        display: flex;
+        gap: 1.5em;
+        padding: 12px;
+    }
+}
+
+.header {
+    font-size: calc(2em - 30%);
+}
+
+.emptyList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0 ;
+
+    & div {
+        display: flex;
+        gap: 3em;
+    }
+}
+
+.emptyList_text {
+    line-height: 100%;
+}
+
+.order {
+    width: 300px;
+    aspect-ratio: 20/9;
+    padding: 12px;
+    border: 1px solid #efebeb;
+    transition-duration: 0.3s;
+    border-radius: 12px;
+
+    &:hover {
+        border: 1px solid #888888;
+    }
+}
+
