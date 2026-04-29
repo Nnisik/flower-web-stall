@@ -1,13 +1,13 @@
-import {useState} from "react";
-import {useCartStore} from "../../store/useCartStore.ts";
 import CartItem from "./CartItem.tsx";
+import styles from "../../styles/styles.module.css";
+import useCart from "../../store/useCart.ts";
 
 const CartList = () => {
-    const [cart] = useState(useCartStore((s) => s.items));
+    const items = useCart((state) => state.items);
 
     return (
-        <div>
-            {cart.map(item => {
+        <div className={styles.cartList}>
+            {items.map(item => {
                 return <CartItem id={item.id} name={item.name} price={item.price}/>
             })}
         </div>

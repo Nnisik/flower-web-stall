@@ -1,16 +1,16 @@
 import file from "../../assets/images/svg/cart-svgrepo-com.svg"
 import styles from "../../styles/styles.module.css";
 import {FC} from "react";
-import {useCartStore} from "../../store/useCartStore.ts";
 import CardProps from "../../types/CardProps";
 import ProductProp from "../../types/ProductProp.ts";
+import useCart from "../../store/useCart.ts";
 
 interface ICartButtonProps {
     elem: CardProps;
 }
 
 const CartButton:FC<ICartButtonProps> = (props) => {
-    const { addItem } = useCartStore();
+    const { items, add } = useCart();
 
     const handleClick = () => {
         const newProduct:ProductProp = {
@@ -19,7 +19,9 @@ const CartButton:FC<ICartButtonProps> = (props) => {
             price: props.elem.price
         };
 
-        addItem(newProduct)
+        add(newProduct);
+        console.log(items);
+
     }
 
     return (

@@ -69,24 +69,23 @@
     margin: auto 0.5em;
     display: flex;
     gap: 2em;
+}
 
-    & a {
-        font-size: 1.25em;
-        color: #242424;
-        text-decoration: none;
-        transition-duration: 0.3s;
-    }
+.navLink {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #242424;
+    transition-duration: 0.3s;
 
-    & a:hover {
+    &:hover {
         font-weight: bold;
         color: black;
     }
 
-    & a:checked {
+    &:checked {
         color: black;
     }
 }
-
 .startPage {
     margin-top: 24vh;
     display: flex;
@@ -394,4 +393,16 @@
 }
 
 .cardModal_emptyMessageContainer {
+}
+
+.cartList {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoLink {
+    font-size: 1.25em;
+    color: #242424;
+    text-decoration: none;
+    transition-duration: 0.3s;
 }

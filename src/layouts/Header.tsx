@@ -3,6 +3,7 @@ import Navigation from "./Navigation.tsx";
 import CartModal from "../features/shopping cart/CartModal.tsx";
 import file from "../assets/images/svg/cart-svgrepo-com.svg";
 import {useState} from "react";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const [isVisible, setVisibility] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
         <>
             <header className={styles.header}>
                 <h1 className={styles.logo}>
-                    <a href={"/"}>Logo</a>
+                    <Link className={styles.logoLink} to={"/"}>Logo</Link>
                 </h1>
                 <div>
                     <Navigation />

@@ -1,10 +1,10 @@
-import {useCartStore} from "../../store/useCartStore.ts";
 import styles from "../../styles/styles.module.css";
 import CartList from "./CartList.tsx";
 import EmptyCardMessage from "./EmptyCardMessage.tsx";
+import useCart from "../../store/useCart.ts";
 
 const CartModal = () => {
-    const numberCartItems = useCartStore((s) => s.items.length);
+    const numberCartItems = useCart((s) => s.items.length);
 
     return (
         <div className={styles.cartModalWindow}>
