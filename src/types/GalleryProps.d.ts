@@ -1,6 +1,8 @@
+import ProductProp from "./ProductProp.ts";
+
 export default interface GalleryProps {
-    header: string,
-    type?: 'product' | 'service',
-    product?: [],
-    services?: []
+    id?: number,
+    type: 'product' | 'service',
+    products?: ProductProp[],
+    services?: ProductProp[]
 }

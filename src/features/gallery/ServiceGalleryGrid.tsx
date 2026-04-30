@@ -13,7 +13,6 @@ const ServiceGalleryGrid = () => {
         text:"CUSTOM FLORAL CONCEPTS",
         description:"Your vision, our blooms. We build arrangements that are both personal and exquisitely simple."
     }];
-
     return (
         <div className={styles.grid_service}>
             {items.map((item) => (

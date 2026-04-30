@@ -1,7 +1,8 @@
 interface ProductProp {
     id?: number,
     name: string,
-    text?: string,
+    description?: string,
+    image?: string,
     price?: string
 }
 

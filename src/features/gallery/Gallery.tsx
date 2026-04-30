@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useEffect} from "react";
 import styles from "../../styles/Gallery.module.css";
 import GalleryProps from "../../types/GalleryProps";
 import ProductGalleryGrid from "./ProductGalleryGrid.tsx";
@@ -6,6 +6,9 @@ import ServiceGalleryGrid from "./ServiceGalleryGrid.tsx";
 
 const Gallery:FC<GalleryProps> = (props) => {
     const isProductGallery:boolean = props.type === 'product';
+
+    useEffect(() => {
+    }, []);
 
     return (
         <section className={styles.gallery}>
