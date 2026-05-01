@@ -1,5 +1,4 @@
 import styles from "../../styles/Order.module.css";
-import LinkComp from "../../components/LinkC.tsx";
 import {FC, ReactNode} from "react";
 
 interface IEmptyList {

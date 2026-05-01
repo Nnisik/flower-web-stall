@@ -3,12 +3,12 @@ import Card from "../../components/Card.tsx";
 import {useGalleryStore} from "../../store/useGalleryStore.ts";
 
 const ProductGalleryGrid = () => {
-    const { items } = useGalleryStore();
+    const { products } = useGalleryStore();
 
     return (
         <div className={styles.grid_product}>
-            {items.map((item) => (
-                <Card key={item.id} text={item.text} price={item.price} />
+            {products.map((item) => (
+                <Card key={item.id} text={item.text} price={item.price} type={"product"} />
             ))}
         </div>
     );

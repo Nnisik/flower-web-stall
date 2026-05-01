@@ -21,7 +21,6 @@ const useOrderStore= create<IOrderState>((set) => {
         loading: false,
         error: null,
 
-        // FIXME: request returns code 500
         add: async (id, date, price) => {
             try {
                 const newOrder: OrderProps = {
@@ -32,7 +31,7 @@ const useOrderStore= create<IOrderState>((set) => {
                     price
                 };
 
-                const res = await fetch(`https://${import.meta.env.API_TOKEN}.mockapi.io/api/v1/order`, {
+                const res = await fetch(`https://${import.meta.env.VITE_API_TOKEN}.mockapi.io/api/v1/order`, {
                     method: "POST",
                     headers: { "content-type": "application/json" },
                     body: JSON.stringify(newOrder)
@@ -53,12 +52,11 @@ const useOrderStore= create<IOrderState>((set) => {
             }
         },
 
-        // FIXME: request returns code 500
         get: async () => {
             set({ loading: true, error: null });
 
             try {
-                const res = await fetch(`https://${import.meta.env.API_TOKEN}.mockapi.io/api/v1/order`)
+                const res = await fetch(`https://${import.meta.env.VITE_API_TOKEN}.mockapi.io/api/v1/order`)
 
                 if (!res.ok) {
                     throw new Error("Fetch failed");

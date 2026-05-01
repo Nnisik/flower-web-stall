@@ -7,7 +7,8 @@ const Card:FC<CardProps> = (props) => {
     const cardProductInfo:CardProps = {
         id: props.id,
         text: props.text,
-        price: props.price
+        price: props.price,
+        type: "product"
     }
 
     return (
