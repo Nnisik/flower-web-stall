@@ -1,12 +1,18 @@
 import styles from "../../styles/Order.module.css";
 import LinkComp from "../../components/LinkC.tsx";
+import {FC, ReactNode} from "react";
 
-const EmptyOrderList = () => {
+interface IEmptyList {
+    text: string,
+    children?: ReactNode | ReactNode[]
+}
+
+const EmptyOrderList:FC<IEmptyList> = ({text, children}) => {
     return (
         <div className={styles.emptyList}>
-            <p className={styles.emptyList_text}>You don't have any active orders</p>
+            <p className={styles.emptyList_text}>{text}</p>
             <div>
-                <LinkComp to={"/gallery"} text={"Gallery"} />
+                { children }
             </div>
         </div>
     );

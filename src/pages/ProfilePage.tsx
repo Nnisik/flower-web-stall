@@ -1,25 +1,16 @@
 import OrdersHistorySection from "../features/profile/OrdersHistory.tsx";
 import ActiveOrdersList from "../components/ActiveOrdersList.tsx";
-import styles from "../styles/Profile.module.css";
+import styles from "../styles/styles.module.css";
 import ProfileInfoSecrion from "../features/profile/ProfileInfoSecrion.tsx";
+import useOrderStore from "../store/useOrderStore.ts";
+import {useEffect} from "react";
 
 const ProfilePage = () => {
-    // TODO: add mock backend
-    // const [orderList, setOrderList]:OrderProps[] = useState([]);
+    const { get } = useOrderStore();
 
-    // TODO: add mock backend
-    // TODO: create normal API-call to mack api
-    /*
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch('');
-            const data = await response.json();
-            setOrderList(data);
-        }
-
-        fetchData();
-    }, [props.someProp])
-     */
+        get();
+    }, [get]);
 
     return (
         <div className={styles.pageContent}>

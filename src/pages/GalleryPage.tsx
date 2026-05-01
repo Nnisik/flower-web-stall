@@ -8,7 +8,7 @@ const GalleryPage = () => {
         <div className={styles.pageContent}>
             <h2>Gallery</h2>
             <Gallery header={"SEASONAL ARRANGEMENTS"} type={'product'} />
-            <Gallery header={"Services"} />
+            <Gallery header={"Services"} type={'service'} />
             <MiniTextSection header={"Work with us"} text={"Discover how we can add a touch of natural beauty to your next event. "} />
         </div>
     );

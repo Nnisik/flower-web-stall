@@ -99,6 +99,7 @@
 }
 
 .pageContent {
+    min-height: 100vh;
     width: 95vw;
     margin: 10vh auto 0;
 

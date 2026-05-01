@@ -1,10 +1,8 @@
 import styles from "../../styles/Gallery.module.css";
 import Card from "../../components/Card.tsx";
-import {FC} from "react";
-import GalleryProps from "../../types/GalleryProps";
 import {useGalleryStore} from "../../store/useGalleryStore.ts";
 
-const ProductGalleryGrid:FC<GalleryProps> = () => {
+const ProductGalleryGrid = () => {
     const { items } = useGalleryStore();
 
     return (
