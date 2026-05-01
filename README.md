@@ -39,3 +39,4 @@ If you are developing a production application, we recommend updating the config
 - [ ] add performance optimization *
 - [ ] add CI/CD pipeline *
 - [ ] add limited component modularity *
+- [ ] add fake data for demo-version
