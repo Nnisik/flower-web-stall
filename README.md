@@ -28,10 +28,10 @@ If you are developing a production application, we recommend updating the config
 
 
 ### TODO
-- [x] split CSS code into modules
-- [x] get rid of "hard coded data" -> include API and mock backend
-- [x] include cart
-- [x] Zustand
-- [ ] testing
-- [ ] write a clean README-file
-- [ ] deploy
+- [ ] write a proper README-file
+- [ ] include tests
+- [ ] configuration env (.env.example missing)
+- [ ] add error handling
+- [ ] add accessibility features (a11y)
+- [ ] add loading states/error boundaries
+- [ ] fix homepage URL mismatch in package.json
