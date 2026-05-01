@@ -35,3 +35,7 @@ If you are developing a production application, we recommend updating the config
 - [ ] add accessibility features (a11y)
 - [ ] add loading states/error boundaries
 - [ ] fix homepage URL mismatch in package.json
+- [ ] set up proper API integration *
+- [ ] add performance optimization *
+- [ ] add CI/CD pipeline *
+- [ ] add limited component modularity *
