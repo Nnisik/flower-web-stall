@@ -1,9 +1,11 @@
 interface ProductProp {
     id?: number,
-    name: string,
+    header: string,
     description?: string,
-    image?: string,
-    price?: string
+    type: "product" | "service",
+    price?: number,
+    image: string,
+    available?: boolean
 }
 
 export default ProductProp;

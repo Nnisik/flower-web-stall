@@ -4,7 +4,6 @@ import useOrderStore from "../store/useOrderStore.ts";
 import Order from "./Order.tsx";
 import LinkComp from "./LinkC.tsx";
 
-// TODO: separate repeated content in separate component
 const ActiveOrdersList = () => {
     const { activeOrders } = useOrderStore();
 

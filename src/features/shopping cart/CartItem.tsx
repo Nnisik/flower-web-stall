@@ -5,7 +5,7 @@ import ProductProp from "../../types/ProductProp.ts";
 const CartItem:FC<ProductProp> = (props) => {
     return (
         <div key={props.id}>
-            <h3>{props.name}</h3>
+            <h3>{props.header}</h3>
             <p>{props.price}</p>
         </div>
     );

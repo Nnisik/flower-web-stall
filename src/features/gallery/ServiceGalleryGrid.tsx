@@ -5,10 +5,12 @@ import {useGalleryStore} from "../../store/useGalleryStore.ts";
 const ServiceGalleryGrid = () => {
     const { services } = useGalleryStore();
 
+    console.log(services)
+
     return (
         <div className={styles.grid_service}>
             {services.map((item) => (
-                <ServiceCard text={item.text} description={item.description} type={"service"} />
+                <ServiceCard header={item.header} description={item.description} type={"service"} image={item.image}/>
             ))}
         </div>
     );

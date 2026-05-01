@@ -29,7 +29,6 @@ If you are developing a production application, we recommend updating the config
 
 ### TODO
 - [x] split CSS code into modules
-- [ ] add SCSS preprocessors (SaSS or PostCSS)
 - [x] get rid of "hard coded data" -> include API and mock backend
 - [x] include cart
 - [x] Zustand

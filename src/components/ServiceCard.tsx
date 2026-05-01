@@ -1,15 +1,15 @@
 import {FC} from "react";
-import CardProps from "../types/CardProps";
 import styles from "../styles/Gallery.module.css";
+import ProductProp from "../types/ProductProp.ts";
 
-const ServiceCard:FC<CardProps> = (props) => {
+const ServiceCard:FC<ProductProp> = (props) => {
     return (
         <div className={styles.card}>
             <div>
-                <h4>{props.text}</h4>
+                <h4>{props.header}</h4>
                 <p>{props.description}</p>
             </div>
-            <img src="" alt="" />
+            <img className={styles.cardImage} src={props.image} alt={props.header} />
         </div>
     );
 }

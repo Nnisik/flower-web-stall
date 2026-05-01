@@ -19,12 +19,14 @@ const useCart= create<ICartState>((set) => {
     return ({
         count: 0,
         items: [],
+
         add: (item) => {
             set((state) => ({
                 count: state.count + 1,
                 items: [...state.items, {...item} ]
             }))
         },
+
         empty: () => {
             set(() => ({
                 count: initialState.count,

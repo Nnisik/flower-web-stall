@@ -1,9 +1,9 @@
 import { create } from "zustand";
-import CardProps from "../types/CardProps";
+import ProductProp from "../types/ProductProp.ts";
 
 interface IGalleryState {
-    products: CardProps[];
-    services: CardProps[];
+    products: ProductProp[];
+    services: ProductProp[];
 
     get: () => Promise<void>;
 }
@@ -21,21 +21,21 @@ export const useGalleryStore = create<IGalleryState>((set) => {
                 if (!res.ok) {
                     throw new Error("Fetch failed");
                 }
-                const data: CardProps[] = await res.json();
+                const data: ProductProp[] = await res.json();
 
-                const prods:CardProps[] = [];
-                const sers:CardProps[] = [];
+                const prods:ProductProp[] = [];
+                const servs:ProductProp[] = [];
 
                 data.forEach((card) => {
                     if (card.type == "product") {
                         prods.push(card)
                     } else {
-                        sers.push(card)
+                        servs.push(card)
                     }
                 });
                 set({
                     products: prods,
-                    services: sers
+                    services: servs
                 });
             } catch (err:any) {
                 console.log(err.message)

@@ -8,7 +8,7 @@ const CartList = () => {
     return (
         <div className={styles.list}>
             {items.map(item => {
-                return <CartItem id={item.id} name={item.name} price={item.price}/>
+                return <CartItem id={item.id} header={item.header} price={item.price} image={item.image} type={item.type}/>
             })}
         </div>
     );
