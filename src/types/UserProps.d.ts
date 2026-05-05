@@ -1,6 +1,5 @@
 export default interface UserProps {
-    id?: number,
+    id: string,
     username: string,
-    text: string,
     image?: string
 }

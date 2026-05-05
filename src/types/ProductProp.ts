@@ -3,7 +3,7 @@ interface ProductProp {
     header: string,
     description?: string,
     type: "product" | "service",
-    price?: number,
+    price: number | -1,
     image: string,
     available?: boolean
 }

@@ -1,7 +1,11 @@
+import ProductProp from "./ProductProp.ts";
+
 export default interface OrderProps {
     id: number,
+    items?: number,
+    content?: ProductProp[],
     orderDate: string,
-    status: 'pending payment' | 'approved' | 'delivering' | 'delivered' | 'canceled',
+    status: string,
     deliveredDate?: string,
     price: number
 }

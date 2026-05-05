@@ -12,8 +12,6 @@ const Card:FC<ProductProp> = (props) => {
         image: props.image
     }
 
-    console.log(props.image)
-    // FIXME: images do not appear
     return (
         <div className={styles.card}>
             <div>

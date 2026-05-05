@@ -1,9 +1,10 @@
 import OrdersHistorySection from "../features/profile/OrdersHistory.tsx";
-import ActiveOrdersList from "../components/ActiveOrdersList.tsx";
+import ActiveOrdersList from "../features/profile/ActiveOrdersList.tsx";
 import styles from "../styles/styles.module.css";
 import ProfileInfoSecrion from "../features/profile/ProfileInfoSecrion.tsx";
 import useOrderStore from "../store/useOrderStore.ts";
 import {useEffect} from "react";
+import data from '../assets/json/user.data.json';
 
 const ProfilePage = () => {
     const { get } = useOrderStore();
@@ -14,7 +15,10 @@ const ProfilePage = () => {
 
     return (
         <div className={styles.pageContent}>
-            <ProfileInfoSecrion username={"User name"} text={"info about user"} />
+            <ProfileInfoSecrion
+                id={data["id"]}
+                username={`${data["firstName"]} ${data["lastName"]}`}
+            />
             <ActiveOrdersList />
             <OrdersHistorySection />
         </div>

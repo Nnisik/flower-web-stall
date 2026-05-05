@@ -2,7 +2,6 @@
     padding-top: 3em;
     display: flex;
     width: 100%;
-    justify-content: space-between;
 
     & div {
         display: flex;
@@ -11,24 +10,21 @@
 
     & section {
         height: fit-content;
-        line-height: 100%;
-        margin: 24px;
+        margin: auto 0 0 0;
+    }
+
+    & img {
+        height: 150px;
+        aspect-ratio: 1/1;
+        border-radius: 24px;
+        border: 1px solid rgba(136, 136, 136, 0.8);
     }
 }
 
 .header {
     font-size: 2em;
-}
-
-.text {
-    font-size: 1.25em;
-}
-
-.image {
-    height: 150px;
-    aspect-ratio: 1/1;
-    border-radius: 24px;
-    background: blueviolet;
+    line-height: 1;
+    margin: 0 12px;
 }
 
 .button {

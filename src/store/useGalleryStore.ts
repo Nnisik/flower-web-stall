@@ -8,7 +8,6 @@ interface IGalleryState {
     get: () => Promise<void>;
 }
 
-// FIXME: returned gallery objects doesn't have headers
 export const useGalleryStore = create<IGalleryState>((set) => {
     return {
         products: [],

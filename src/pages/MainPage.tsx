@@ -7,7 +7,7 @@ const MainPage = () => {
     return (
         <div className={styles.pageContent}>
             <section className={styles.startPage}>
-                <h1 className={styles.startPage_logo}>Logo</h1>
+                <h1 className={styles.startPage_logo}>Bloom</h1>
             </section>
             <ImageSection />
             <MiniTextSection header={"Who we are"} text={"We're *** and we're here to help you find your floral story."} />

@@ -33,7 +33,7 @@
 }
 
 .order {
-    width: 300px;
+    height: fit-content;
     aspect-ratio: 20/9;
     padding: 12px;
     border: 1px solid #efebeb;
@@ -43,5 +43,28 @@
     &:hover {
         border: 1px solid #888888;
     }
+
+    &:hover .order_price {
+        color: #888888;
+    }
+
+    & h4, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    & h4 {
+        line-height: 1.5;
+        font-size: 1.25em;
+        padding-bottom: 12px;
+    }
+
+    & p {
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
 }
 
+.order_price {
+    color: transparent;
+}

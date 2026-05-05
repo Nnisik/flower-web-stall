@@ -9,13 +9,10 @@ interface ICartButtonProps {
 }
 
 const CartButton:FC<ICartButtonProps> = (props) => {
-    const { items, add } = useCart();
+    const { add } = useCart();
 
     const handleClick = () => {
-
         add(props.elem);
-        console.log(items);
-
     }
 
     return (

@@ -2,17 +2,24 @@ import styles from "../../styles/Cart.module.css";
 import CartList from "./CartList.tsx";
 import EmptyCardMessage from "./EmptyCardMessage.tsx";
 import useCart from "../../store/useCart.ts";
+import useOrderStore from "../../store/useOrderStore.ts";
 
 const CartModal = () => {
-    const numberCartItems = useCart((s) => s.items.length);
+    const handleOrder = () => {
+        useOrderStore.getState().add();
+        console.log("Order created");
+    }
+
+    const count = useCart((state) => state.count);
 
     return (
         <div className={styles.modal}>
             <h1>Cart</h1>
-            {numberCartItems === 0
+            {count === 0
                 ? <EmptyCardMessage />
                 : <CartList />
             }
+            <button className={styles.orderButton} onClick={handleOrder}>Order</button>
         </div>
     );
 }

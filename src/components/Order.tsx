@@ -10,7 +10,7 @@ const Order:FC<OrderProps> = (props) => {
             <p>Order date: {props.orderDate}</p>
             <p>Status: {props.status} </p>
             { isDelivered ? (<p>Delivered: {props.deliveredDate} </p>) : (<></>)}
-            <p>{props.price}</p>
+            <p className={styles.order_price}>{props.price}</p>
         </div>
     );
 }

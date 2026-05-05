@@ -7,8 +7,15 @@ const ProductGalleryGrid = () => {
 
     return (
         <div className={styles.grid_product}>
-            {products.map((item) => (
-                <Card key={item.id} header={item.header} price={item.price} type={"product"} image={item.image} />
+            {products.map((item, key) => (
+                <Card
+                    key={key}
+                    id={item.id}
+                    header={item.header}
+                    price={item.price}
+                    type={"product"}
+                    image={item.image}
+                />
             ))}
         </div>
     );

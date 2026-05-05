@@ -1,17 +1,27 @@
 import styles from "../styles/styles.module.css";
+import data from '../assets/json/corousel.data.json';
 
-// FIXME: finish scrolling
-// TODO: style inner components
 const HorizontalCarousel = () => {
     return (
         <div className={styles.carouselHorizontal}>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className={styles.group}>
+                {data.map((item) => (
+                    <img
+                        key={item.id}
+                        src={item.image}
+                        alt={""}
+                    />
+                ))}
+            </div>
+            <div aria-hidden={true} className={styles.group}>
+                {data.map((item) => (
+                    <img
+                        key={item.id}
+                        src={item.image}
+                        alt={""}
+                    />
+                ))}
+            </div>
         </div>
     );
 }

@@ -1,8 +1,8 @@
-import EmptyOrderList from "../features/profile/EmptyOrderList.tsx";
-import OrdersContainer from "./OrdersContainer.tsx";
-import useOrderStore from "../store/useOrderStore.ts";
-import Order from "./Order.tsx";
-import LinkComp from "./LinkC.tsx";
+import EmptyOrderList from "./EmptyOrderList.tsx";
+import OrdersContainer from "../../components/OrdersContainer.tsx";
+import useOrderStore from "../../store/useOrderStore.ts";
+import Order from "../../components/Order.tsx";
+import LinkComp from "../../components/LinkC.tsx";
 
 const ActiveOrdersList = () => {
     const { activeOrders } = useOrderStore();
@@ -15,8 +15,9 @@ const ActiveOrdersList = () => {
                 </EmptyOrderList>
                 : <div>
                     {
-                        activeOrders.map((order) => (
+                        activeOrders.map((order, key) => (
                         <Order
+                            key={key}
                             id={order.id}
                             orderDate={order.orderDate}
                             price={order.price}

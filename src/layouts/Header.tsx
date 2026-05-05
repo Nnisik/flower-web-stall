@@ -13,7 +13,7 @@ const Header = () => {
         <>
             <header className={styles.header}>
                 <h1 className={styles.logo}>
-                    <Link className={styles.link} to={"/"}>Logo</Link>
+                    <Link className={styles.link} to={"/"}>Bloom</Link>
                 </h1>
                 <div>
                     <Navigation />
