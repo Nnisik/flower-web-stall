@@ -13,6 +13,7 @@ const ProductGalleryGrid = () => {
                     id={item.id}
                     header={item.header}
                     price={item.price}
+                    description={item.description}
                     type={"product"}
                     image={item.image}
                 />

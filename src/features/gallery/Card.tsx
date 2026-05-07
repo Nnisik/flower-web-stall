@@ -8,6 +8,7 @@ const Card:FC<ProductProp> = (props) => {
         id: props.id,
         header: props.header,
         price: props.price,
+        description: "",
         type: "product",
         image: props.image
     }

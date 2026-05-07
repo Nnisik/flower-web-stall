@@ -13,6 +13,7 @@ const CartList = () => {
                     id={item.id}
                     header={item.header}
                     price={item.price}
+                    description={item.description}
                     image={item.image}
                     type={item.type}
                 />

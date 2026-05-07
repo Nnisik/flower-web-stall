@@ -12,6 +12,7 @@ const ServiceGalleryGrid = () => {
                     key={key}
                     header={item.header}
                     description={item.description}
+                    price={item.price}
                     type={"service"}
                     image={item.image}
                 />
