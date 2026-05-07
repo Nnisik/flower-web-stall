@@ -27,7 +27,9 @@ const useOrderStore= create<IOrderState>((set) => {
             const active: OrderProps[] = [];
             const old: OrderProps[] = [];
 
-            data.forEach((order) => {
+            const ordersData:OrderProps[] = data;
+
+            ordersData.forEach((order) => {
                 if (order.status === "delivered" || order.status === "canceled") {
                     old.push(order);
                 } else {
