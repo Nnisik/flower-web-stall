@@ -2,11 +2,11 @@
 
 A modern, fully-functional e-commerce application for a flower shop built with React, TypeScript, and modern web technologies.
 
-## 🎯 Live Demo
+## Live Demo
 
-📱 **[View Live Demo](https://flower-stall.vercel.app)**
+**[View Live Demo](https://flower-stall.vercel.app)**
 
-## 📋 Overview
+## Overview
 
 Flower Stall is a frontend e-commerce application that demonstrates core web development skills including component architecture, state management, routing, and API integration. The app showcases a flower shop's products and services, with a complete shopping cart system and order management functionality.
 
