@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import ProductProp from "../types/ProductProp.ts";
 
+import data from '../assets/json/demoData/gallery.data.json';
+
 interface IGalleryState {
     products: ProductProp[];
     services: ProductProp[];
@@ -15,13 +17,6 @@ export const useGalleryStore = create<IGalleryState>((set) => {
 
         get: async () => {
             try {
-                const res = await fetch(`https://${import.meta.env.VITE_API_TOKEN}.mockapi.io/api/v1/products`);
-
-                if (!res.ok) {
-                    throw new Error("Fetch failed");
-                }
-                const data: ProductProp[] = await res.json();
-
                 const prods:ProductProp[] = [];
                 const servs:ProductProp[] = [];
 
@@ -36,8 +31,8 @@ export const useGalleryStore = create<IGalleryState>((set) => {
                     products: prods,
                     services: servs
                 });
-            } catch (err:any) {
-                console.log(err.message)
+            } catch (error) {
+                console.log(error)
             }
         }
     }

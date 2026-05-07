@@ -32,7 +32,6 @@ If you are developing a production application, we recommend updating the config
 - [ ] include tests
 - [ ] configuration env (.env.example missing)
 - [ ] add error handling
-- [ ] add accessibility features (a11y)
 - [ ] add loading states/error boundaries
 - [ ] fix homepage URL mismatch in package.json
 - [ ] set up proper API integration *
