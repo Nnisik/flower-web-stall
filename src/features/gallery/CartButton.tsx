@@ -1,7 +1,7 @@
 import file from "../../assets/images/svg/cart-svgrepo-com.svg"
 import styles from "../../styles/Cart.module.css";
 import {FC} from "react";
-import useCart from "../../store/useCart.ts";
+import useCart from "../../store/UseCart/useCart.ts";
 import {ICartButtonProps} from "../../types/ICartButtonProps";
 
 const CartButton:FC<ICartButtonProps> = (props) => {

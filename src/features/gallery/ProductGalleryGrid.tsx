@@ -1,6 +1,6 @@
 import styles from "../../styles/Gallery.module.css";
 import Card from "./Card.tsx";
-import {useGalleryStore} from "../../store/useGalleryStore.ts";
+import {useGalleryStore} from "../../store/UseGalleryStore/useGalleryStore.ts";
 
 const ProductGalleryGrid = () => {
     const { products } = useGalleryStore();

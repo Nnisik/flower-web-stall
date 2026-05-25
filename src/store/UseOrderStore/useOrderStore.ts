@@ -1,8 +1,8 @@
 import {create} from "zustand";
-import OrderProps from "../types/IOrderProps";
-import useCart from "./useCart.ts";
-import {buildNewOrder} from "../utils/buildNewOrder.ts";
-import {IOrderState} from "../types/IOrderStore";
+import OrderProps from "../../types/IOrderProps";
+import useCart from "../UseCart/useCart.ts";
+import {buildNewOrder} from "../../utils/BuildNewOrder/buildNewOrder.ts";
+import {IOrderState} from "../../types/IOrderStore";
 
 const useOrderStore= create<IOrderState>((set) => {
     return {

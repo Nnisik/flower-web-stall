@@ -1,6 +1,6 @@
 import {FC, useCallback, useEffect, useState} from "react";
 import styles from "../../styles/Gallery.module.css";
-import {useGalleryStore} from "../../store/useGalleryStore.ts";
+import {useGalleryStore} from "../../store/UseGalleryStore/useGalleryStore.ts";
 import {IGalleryProps} from "../../types/IGalleryProps";
 
 const Gallery:FC<IGalleryProps> = ({header, children }) => {

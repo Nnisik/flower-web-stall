@@ -1,6 +1,6 @@
 import CartItem from "./CartItem.tsx";
 import styles from "../../styles/Cart.module.css";
-import useCart from "../../store/useCart.ts";
+import useCart from "../../store/UseCart/useCart.ts";
 
 const CartList = () => {
     const items = useCart((state) => state.items);

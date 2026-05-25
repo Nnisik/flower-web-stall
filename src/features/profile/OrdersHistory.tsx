@@ -1,6 +1,6 @@
 import Order from "../../components/Order.tsx";
 import OrdersContainer from "../../components/OrdersContainer.tsx";
-import useOrderStore from "../../store/useOrderStore.ts";
+import useOrderStore from "../../store/UseOrderStore/useOrderStore.ts";
 import EmptyOrderList from "./EmptyOrderList.tsx";
 
 const OrdersHistorySection = () => {

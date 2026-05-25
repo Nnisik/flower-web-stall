@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import {ICartStore} from "../types/ICartStore";
+import {ICartStore} from "../../types/ICartStore";
 
 const initialState = {
     count: 0,

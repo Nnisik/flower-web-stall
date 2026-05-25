@@ -1,8 +1,12 @@
-import OrderProps from "../types/IOrderProps";
-import useCart from "../store/useCart.ts";
-import {calculateFullPrice} from "./calculateOrderFullPrice.ts";
+import OrderProps from "../../types/IOrderProps";
+import useCart from "../../store/UseCart/useCart.ts";
+import {calculateFullPrice} from "../CalculateOrderFullPrice/calculateOrderFullPrice.ts";
 
 export const buildNewOrder = (orderID:number) => {
+    if (orderID <= 0) {
+        return {message: "Wrong ID provided"};
+    }
+
     const todayDate = new Date();
     const orderStatusOptions:string[] = ['pending payment', 'approved', 'delivering', 'delivered', 'canceled'];
     const orderStatus:string = orderStatusOptions[Math.floor(Math.random() * orderStatusOptions.length)]

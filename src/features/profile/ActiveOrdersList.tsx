@@ -1,6 +1,6 @@
 import EmptyOrderList from "./EmptyOrderList.tsx";
 import OrdersContainer from "../../components/OrdersContainer.tsx";
-import useOrderStore from "../../store/useOrderStore.ts";
+import useOrderStore from "../../store/UseOrderStore/useOrderStore.ts";
 import Order from "../../components/Order.tsx";
 import LinkComp from "../../components/LinkC.tsx";
 

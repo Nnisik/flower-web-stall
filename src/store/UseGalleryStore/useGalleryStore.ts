@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import {IGalleryStore} from "../types/IGalleryStore";
-import {IProductProps} from "../types/ProductProps";
+import {IGalleryStore} from "../../types/IGalleryStore";
+import {IProductProps} from "../../types/ProductProps";
 
 export const useGalleryStore = create<IGalleryStore>((set) => {
     return {

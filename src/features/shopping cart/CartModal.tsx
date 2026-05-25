@@ -1,8 +1,8 @@
 import styles from "../../styles/Cart.module.css";
 import CartList from "./CartList.tsx";
 import EmptyCardMessage from "./EmptyCardMessage.tsx";
-import useCart from "../../store/useCart.ts";
-import useOrderStore from "../../store/useOrderStore.ts";
+import useCart from "../../store/UseCart/useCart.ts";
+import useOrderStore from "../../store/UseOrderStore/useOrderStore.ts";
 
 const CartLoadingMessage = () => {
     return (

@@ -1,6 +1,6 @@
 import styles from "../../styles/Gallery.module.css";
 import ServiceCard from "../../components/ServiceCard.tsx";
-import {useGalleryStore} from "../../store/useGalleryStore.ts";
+import {useGalleryStore} from "../../store/UseGalleryStore/useGalleryStore.ts";
 
 const ServiceGalleryGrid = () => {
     const { services } = useGalleryStore();
