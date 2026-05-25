@@ -1,6 +1,6 @@
 import { create } from "zustand";
-import ProductProp from "../types/ProductProps.d.ts";
 import {IGalleryStore} from "../types/IGalleryStore";
+import {IProductProps} from "../types/ProductProps";
 
 export const useGalleryStore = create<IGalleryStore>((set) => {
     return {
@@ -26,10 +26,10 @@ export const useGalleryStore = create<IGalleryStore>((set) => {
                     console.error(`Error ${res.status} - fetch failed - ${res.body}`);
                 }
 
-                const data: ProductProp[] = await res.json();
+                const data: IProductProps[] = await res.json();
 
-                const prods:ProductProp[] = [];
-                const servs:ProductProp[] = [];
+                const prods:IProductProps[] = [];
+                const servs:IProductProps[] = [];
 
                 data.forEach((card) => {
                     if (card.type == "product") {

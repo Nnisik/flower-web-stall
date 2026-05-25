@@ -1,9 +1,9 @@
 import {FC} from "react";
-import ProductProp from "../../types/ProductProps.d.ts";
 import styles from "../../styles/Cart.module.css";
 import file from "../../assets/images/svg/Bin-1--Streamline-Ultimate.svg";
+import {IProductProps} from "../../types/ProductProps";
 
-const CartItem:FC<ProductProp> = (props) => {
+const CartItem:FC<IProductProps> = (props) => {
     const handleDelete = () => {
         alert("Button clicked")
     }
