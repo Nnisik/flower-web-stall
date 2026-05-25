@@ -1,21 +1,12 @@
 import { create } from "zustand";
-import ProductProp from "../types/ProductProp.ts";
+import {ICartStore} from "../types/ICartStore";
 
 const initialState = {
     count: 0,
     items: []
 };
 
-interface ICartState {
-    count: number;
-    items: ProductProp[];
-
-    add: (item: ProductProp) => void;
-    // remove: (id: number) => void;
-    empty: () => void;
-}
-
-const useCart= create<ICartState>((set) => {
+const useCart= create<ICartStore>((set) => {
     return ({
         count: 0,
         items: [],

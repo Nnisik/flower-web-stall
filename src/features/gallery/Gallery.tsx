@@ -1,19 +1,41 @@
-import {FC, ReactNode} from "react";
+import {FC, useCallback, useEffect, useState} from "react";
 import styles from "../../styles/Gallery.module.css";
+import {useGalleryStore} from "../../store/useGalleryStore.ts";
+import {IGalleryProps} from "../../types/IGalleryProps";
 
-interface GalleryProps {
-    header: string,
-    children: ReactNode | ReactNode[]
-}
+const Gallery:FC<IGalleryProps> = ({header, children }) => {
+    const { loading, error } = useGalleryStore();
 
-const Gallery:FC<GalleryProps> = ({header, children }) => {
+    const [loadingState, setLoadingState] = useState<boolean>(false);
+    const [errorState, setErrorState] = useState<boolean>(false);
+
+    const checkLoadingState = useCallback(() => {
+        setLoadingState(loading);
+    }, [loading]);
+
+    const checkErrorState = useCallback(() => {
+        setErrorState(error);
+    }, [error]);
+
+    useEffect(() => {
+        checkLoadingState();
+        checkErrorState();
+    }, []);
+
     return (
-        <section className={styles.gallery}>
-            <article>
-                <h3>{ header }</h3>
-            </article>
-            { children }
-        </section>
+        <> {
+            loadingState ?
+                <div>Loading</div> :
+                errorState ?
+                    <div>Error</div> :
+                    <section className={styles.gallery}>
+                        <article>
+                            <h3>{header}</h3>
+                        </article>
+                        {children}
+                    </section>
+        }
+        </>
     );
 }
 

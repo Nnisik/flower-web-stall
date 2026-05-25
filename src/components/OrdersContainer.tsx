@@ -1,12 +1,8 @@
 import styles from "../styles/Order.module.css";
-import {FC, ReactNode} from "react";
+import {FC} from "react";
+import {IOrderListProps} from "../types/IOrderListProps";
 
-interface OrderListProps {
-    header: string
-    children: ReactNode | ReactNode[];
-}
-
-const OrdersContainer:FC<OrderListProps> = (props) => {
+const OrdersContainer:FC<IOrderListProps> = (props) => {
     return (
         <div className={styles.section}>
             <h3 className={styles.header}>{props.header}</h3>

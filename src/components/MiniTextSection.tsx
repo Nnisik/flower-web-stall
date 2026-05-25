@@ -1,8 +1,8 @@
 import {FC} from "react";
 import styles from "../styles/styles.module.css";
-import TextSectionProps from "../types/TextSectionProps";
+import ITextSectionProps from "../types/ITextSectionProps";
 
-const MiniTextSection:FC<TextSectionProps> = (props) => {
+const MiniTextSection:FC<ITextSectionProps> = (props) => {
     return (
         <section className={styles.aboutSection}>
             <p className={styles.aboutSection_subheader}>{props.header}</p>

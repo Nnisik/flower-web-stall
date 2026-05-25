@@ -1,8 +1,8 @@
 import {FC} from "react";
 import styles from "../styles/Gallery.module.css";
-import ProductProp from "../types/ProductProp.ts";
+import {IProductProps} from "../types/ProductProps";
 
-const ServiceCard:FC<ProductProp> = (props) => {
+const ServiceCard:FC<IProductProps> = (props) => {
     return (
         <div className={styles.card}>
             <div>

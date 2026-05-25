@@ -1,8 +1,8 @@
 import {FC} from "react";
-import OrderProps from "../types/OrderProps";
+import IOrderProps from "../types/IOrderProps";
 import styles from "../styles/Order.module.css";
 
-const Order:FC<OrderProps> = (props) => {
+const Order:FC<IOrderProps> = (props) => {
     const isDelivered = props.status === 'delivered';
     return (
         <div className={styles.order}>

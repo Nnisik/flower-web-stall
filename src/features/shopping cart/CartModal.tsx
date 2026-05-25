@@ -4,6 +4,18 @@ import EmptyCardMessage from "./EmptyCardMessage.tsx";
 import useCart from "../../store/useCart.ts";
 import useOrderStore from "../../store/useOrderStore.ts";
 
+const CartLoadingMessage = () => {
+    return (
+        <p>Creating an order</p>
+    );
+}
+
+const CartErrorMessage = () => {
+    return (
+        <p>Error</p>
+    );
+}
+
 const CartModal = () => {
     const handleOrder = () => {
         useOrderStore.getState().add();
@@ -12,17 +24,26 @@ const CartModal = () => {
 
     const count = useCart((state) => state.count);
 
+    const { loading, error } = useOrderStore();
+
     return (
-        <div className={styles.modal}>
-            <h1>Cart</h1>
-            {count === 0
-                ? <EmptyCardMessage />
-                : <CartList />
+        <>
+            {
+                loading ?
+                    <CartLoadingMessage/> :
+                    error ?
+                        <CartErrorMessage /> :
+                        <div className={styles.modal}>
+                            <h1>Cart</h1>
+                            {count === 0
+                                ? <EmptyCardMessage />
+                                : <CartList />
+                            }
+                            <button className={styles.orderButton} onClick={handleOrder}>Order</button>
+                        </div>
             }
-            <button className={styles.orderButton} onClick={handleOrder}>Order</button>
-        </div>
-    );
+        </>
+    )
 }
 
 export default CartModal;
-// TODO: split components into diff files

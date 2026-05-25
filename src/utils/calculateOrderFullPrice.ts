@@ -1,4 +1,4 @@
-import ProductProp from "../types/ProductProp.ts";
+import ProductProp from "../types/ProductProps.d.ts";
 import useCart from "../store/useCart.ts";
 
 export const calculateFullPrice:()=>number = () => {

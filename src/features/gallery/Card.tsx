@@ -1,10 +1,10 @@
 import {FC} from "react";
 import styles from "../../styles/Gallery.module.css";
 import CartButton from "./CartButton.tsx";
-import ProductProp from "../../types/ProductProp.ts";
+import {IProductProps} from "../../types/ProductProps";
 
-const Card:FC<ProductProp> = (props) => {
-    const cardProductInfo:ProductProp = {
+const Card:FC<IProductProps> = (props) => {
+    const cardProductInfo:IProductProps = {
         id: props.id,
         header: props.header,
         price: props.price,

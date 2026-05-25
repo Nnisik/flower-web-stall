@@ -1,6 +1,6 @@
-import ProductProp from "./ProductProp.ts";
+import ProductProp from "./ProductProps.d.ts";
 
-export default interface OrderProps {
+export default interface IOrderProps {
     id: number | string,
     items?: number,
     content?: ProductProp[],

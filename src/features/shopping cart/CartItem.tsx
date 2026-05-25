@@ -1,6 +1,5 @@
-// TODO: style component
 import {FC} from "react";
-import ProductProp from "../../types/ProductProp.ts";
+import ProductProp from "../../types/ProductProps.d.ts";
 import styles from "../../styles/Cart.module.css";
 import file from "../../assets/images/svg/Bin-1--Streamline-Ultimate.svg";
 

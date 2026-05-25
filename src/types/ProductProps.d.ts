@@ -1,4 +1,4 @@
-interface ProductProp {
+export interface IProductProps {
     id?: number,
     header: string,
     description: string,
@@ -8,7 +8,6 @@ interface ProductProp {
     available?: boolean
 }
 
-export default ProductProp;
 
 /*
 <html>TS2345: Argument of type '{ header: string;

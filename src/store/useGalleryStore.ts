@@ -1,22 +1,33 @@
 import { create } from "zustand";
-import ProductProp from "../types/ProductProp.ts";
+import ProductProp from "../types/ProductProps.d.ts";
+import {IGalleryStore} from "../types/IGalleryStore";
 
-import data from '../assets/json/demoData/gallery.data.json';
-
-interface IGalleryState {
-    products: ProductProp[];
-    services: ProductProp[];
-
-    get: () => Promise<void>;
-}
-
-export const useGalleryStore = create<IGalleryState>((set) => {
+export const useGalleryStore = create<IGalleryStore>((set) => {
     return {
         products: [],
         services: [],
 
+        loading: false,
+        error: false,
+
         get: async () => {
+            set({
+                loading: true
+            });
+
             try {
+                const res = await fetch(`https://${import.meta.env.VITE_API_TOKEN}.mockapi.io/api/v1/products`);
+
+                if (!res.ok) {
+                    set({
+                        loading: false,
+                        error: true
+                    });
+                    console.error(`Error ${res.status} - fetch failed - ${res.body}`);
+                }
+
+                const data: ProductProp[] = await res.json();
+
                 const prods:ProductProp[] = [];
                 const servs:ProductProp[] = [];
 
@@ -24,15 +35,22 @@ export const useGalleryStore = create<IGalleryState>((set) => {
                     if (card.type == "product") {
                         prods.push(card)
                     } else {
-                        servs.push(card)
-                    }
+                        servs.push(card)}
                 });
+
                 set({
                     products: prods,
-                    services: servs
+                    services: servs,
+                    loading: false,
+                    error: false
                 });
-            } catch (error) {
-                console.log(error)
+            }
+            catch (err) {
+                set({
+                    loading: false,
+                    error: true
+                });
+                console.error(err)
             }
         }
     }

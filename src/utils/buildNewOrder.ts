@@ -1,4 +1,4 @@
-import OrderProps from "../types/OrderProps";
+import OrderProps from "../types/IOrderProps";
 import useCart from "../store/useCart.ts";
 import {calculateFullPrice} from "./calculateOrderFullPrice.ts";
 

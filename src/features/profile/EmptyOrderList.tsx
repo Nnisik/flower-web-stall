@@ -1,10 +1,6 @@
 import styles from "../../styles/Order.module.css";
-import {FC, ReactNode} from "react";
-
-interface IEmptyList {
-    text: string,
-    children?: ReactNode | ReactNode[]
-}
+import {FC} from "react";
+import {IEmptyList} from "../../types/IEmptyList";
 
 const EmptyOrderList:FC<IEmptyList> = ({text, children}) => {
     return (

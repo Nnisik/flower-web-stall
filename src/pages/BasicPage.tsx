@@ -1,12 +1,9 @@
 import Header from "../layouts/Header.tsx";
 import Footer from "../layouts/Footer.tsx";
-import {FC, ReactNode} from "react";
+import {FC} from "react";
+import {IBasicPageProps} from "../types/IBasicPageProps.ts";
 
-interface BasicPageProps {
-    children: ReactNode | ReactNode[];
-}
-
-const BasicPage:FC<BasicPageProps> = ({children}) => {
+const BasicPage:FC<IBasicPageProps> = ({children}) => {
     return  (
         <>
             <Header />
