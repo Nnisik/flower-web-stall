@@ -118,8 +118,8 @@ Testing setup with Vitest and React Testing Library is recommended for productio
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## TODO
-- [ ] Add Vitest + React Testing Library 
-- [x] Implement error boundaries & loading states
-- [ ] Document component architecture 
-- [x] Add accessibility audit
-- [x] Fix deploy (add API keys in vercel)
+- [ ] Add Vitest + React Testing Library/Playwrith
+- [ ] Build Flask backend
+  - [ ] Endpoints (Routes)
+  - [ ] MySQL DB (Modeles)
+  - [ ] Pytest tests

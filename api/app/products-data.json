@@ -1,0 +1,98 @@
+[
+  {
+    "header": "Dawn Bloom",
+    "description": "description 1",
+    "image": "https://www.floralsilk.co.uk/Images/CategoryBanner/small/bouquets_smallban.jpg",
+    "price": 72,
+    "type": "product",
+    "id": 1
+  },
+  {
+    "header": "Solstice Stems",
+    "description": "description 2",
+    "image": "https://www.twigandvine.com.au/cdn/shop/files/FullSizeRender_ab5f9868-f10b-4ae5-8605-45ec05436f2a.jpg?v=1757909705",
+    "price": 42,
+    "type": "product",
+    "id": 2
+  },
+  {
+    "header": "Whisper GreenS",
+    "description": "description 3",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNHtBSrqnzxF3g3iEejBWSYxBMZZ34bqDfVg&s",
+    "price": 13,
+    "type": "product",
+    "id": 3
+  },
+  {
+    "header": "Moonlit Meadow",
+    "description": "description 4",
+    "image": "https://i.pinimg.com/736x/cf/f5/1b/cff51b2b478239445e9340f76d3162bc.jpg",
+    "price": 53,
+    "type": "product",
+    "id": 4
+  },
+  {
+    "header": "River Stone",
+    "description": "description 5",
+    "image": "https://cloudinary-a.akamaihd.net/ufn/image/upload/1641935583244_10.jpg",
+    "price": 91,
+    "type": "product",
+    "id": 5
+  },
+  {
+    "header": "Clarity PetalS",
+    "description": "description 6",
+    "image": "https://i.etsystatic.com/21507001/r/il/e23d00/5141982320/il_570xN.5141982320_5a00.jpg",
+    "price": 68,
+    "type": "product",
+    "id": 6
+  },
+  {
+    "header": "Ember Leaf",
+    "description": "description 7",
+    "image": "https://cdn.lisaangel.co.uk/image/cache/data/product-images/ss24/tf/natural-market-style-dried-flower-bouquet-4x3a0725-515x515.jpeg",
+    "price": 96,
+    "type": "product",
+    "id": 7
+  },
+  {
+    "header": "FLORAL INSTALLATIONS",
+    "description": "We create clean, contemporary designs that elevate any environment, from intimate gatherings to grand events.",
+    "image": "https://images.junebugweddings.com/1e/f9/1ef98d24b96dfc6d.jpg",
+    "price": 350,
+    "type": "service",
+    "id": 8
+  },
+  {
+    "header": "NATIVE PLANT ARRANGEMENTS",
+    "description": "Our selection of locally sourced flora brings natural resilience and effortless elegance to your home.",
+    "image": "https://thelane.com/wp-content/uploads/2025/03/wedding-florists-1-15.jpg",
+    "price": 150,
+    "type": "service",
+    "id": 9
+  },
+  {
+    "header": "CUSTOM FLORAL CONCEPTS",
+    "description": "Your vision, our blooms. We build arrangements that are both personal and exquisitely simple.",
+    "image": "https://static01.nyt.com/images/2021/10/04/t-magazine/04tmag-doan-slide-8ILB/04tmag-doan-slide-8ILB-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+    "price": 190,
+    "type": "service",
+    "id": 10
+  },
+  {
+    "header": "Skyline Bloom",
+    "description": "description 11",
+    "image": "https://www.weareflowergirls.com/cdn/shop/products/WeAreFlowergirls_Dried_Flower_Bouquet-1340557.jpg?v=1619033705",
+    "price": 84,
+    "type": "product",
+    "id": 11
+  },
+  {
+    "header": "Still Waters",
+    "description": "description 11",
+    "image": "https://cdn.store-assets.com/s/192999/i/78143367.jpeg?width=1024",
+    "price": 84,
+    "type": "product",
+    "id": 12
+  }
+]
