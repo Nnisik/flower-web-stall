@@ -1,9 +1,9 @@
 from flask import jsonify, Blueprint, request
 from dotenv import load_dotenv
-import os
-import requests
 
-from app.db import get_product_by_id, get_all_products
+from app.db import get_product_by_id, get_all_products, create_new_product
+from app.models import Product
+from app.utils import format_product_data
 
 load_dotenv()
 
@@ -33,50 +33,75 @@ def products():
                     "details": f"No product found"
                 }
             })
+        else:
 
+            response_data = []
 
-        # TODO: response formation into a JSON list format
+            for data_elem in data:
+                response_data.append(format_product_data(data_elem))
+
+            return jsonify({
+                'meta': {
+                    'status': 'success',
+                    'code': 200,
+                    "timestamp": "2026-06-16T12:30:00Z",
+                    'message': 'Product retrieved successfully'
+                },
+                'data': response_data
+            })
+
+    elif request.method == 'POST':
+
+        name = request.json['name']
+        description = request.json['description']
+        category = request.json['category']
+        image = request.json['image']
+
+        new_product = Product(
+            -1,
+            name,
+            description,
+            category,
+            0,
+            0,
+            image
+        )
+        new_product.add_new_product()
+
+        data = get_all_products()
+
+        response_data = []
+
+        for data_elem in data:
+            response_data.append(format_product_data(data_elem))
 
         return jsonify({
             'meta': {
                 'status': 'success',
-                'code': 200,
+                'code': 201,
                 "timestamp": "2026-06-16T12:30:00Z",
-                'message': 'Product retrieved successfully'
+                'message': 'Product created successfully'
             },
-            'data': [{
-                "id": data['id'],
-                "name": data['name'],
-                'description': data['description'],
-                'category': {
-                    'id': data['category_id'],
-                    'name': data['category_name']
-                },
-                'rating': {
-                    'average': data['rating_average'],
-                    'review_count': data['rating_review_count'],
-                },
-                'in_stock': data['id'],
-                'image': {
-                    'url': data['id'],
-                    'alt_text': data['name']
-                }
-            }]
-        })
-
-    elif request.method == 'POST':
-        product_id = request.form('id')
-        return jsonify({
-            'message': 'You made a POST request',
-            'id': product_id
+            'data': response_data
         })
 
     else:
-        return jsonify({'message': 'This message is not defined yet'})
+        return jsonify({
+            'meta': {
+                'status': 'error',
+                'code': 500,
+                "timestamp": "2026-06-16T12:30:00Z",
+                'message': 'Request not identified',
+            },
+            'error': {
+                "code": "PRODUCT_NOT_FOUND",
+                "details": f"Error"
+            }
+        })
 
 
 @main.route('/api/v2/products/<int:order_id>', methods=['GET', 'PUT'])
-def single_product():
+def single_product(id):
     if request.method == 'GET':
         data = get_product_by_id(id)
 
@@ -101,24 +126,7 @@ def single_product():
                 "timestamp": "2026-06-16T12:30:00Z",
                 'message': 'Product retrieved successfully'
             },
-            'data': {
-                "id": data['id'],
-                "name": data['name'],
-                'description': data['description'],
-                'category': {
-                    'id': data['category_id'],
-                    'name': data['category_name']
-                },
-                'rating': {
-                    'average': data['rating_average'],
-                    'review_count': data['rating_review_count'],
-                },
-                'in_stock': data['id'],
-                'image': {
-                    'url': data['id'],
-                    'alt_text': data['name']
-                }
-            }
+            'data': format_product_data(data)
         })
 
     elif request.method == 'PUT':

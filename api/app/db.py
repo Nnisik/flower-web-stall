@@ -4,13 +4,16 @@ import os
 import asyncpg
 from dotenv import load_dotenv
 
+from app.constants import PRODUCT_CATEGORY_NAMES
+
 # Load environment variables from .env file
 load_dotenv()
 
 CONN_STRING = os.getenv("DATABASE_URL")
 conn = None
 
-async def create_new_product():
+
+async def create_new_product(product_name, product_description, product_category, product_image):
     global conn
 
     try:
@@ -37,25 +40,25 @@ async def create_new_product():
             print(f"Error creating table : ${e}")
 
         finally:
-            pass
+            try:
+                await conn.execute(
+                    "INSERT INTO products (name, description, category_id, category_name, rating_average ,rating_review_count ,image_url) VALUES ($1, $2, $3, $4, $5, $6, $7);",
+                    product_name,
+                    product_description,
+                    product_category,
+                    PRODUCT_CATEGORY_NAMES[product_category],
+                    0,
+                    0,
+                    product_image,
+                )
+                print("Inserted a single product.")
+                return get_all_products()
 
-        try:
-            await conn.execute(
-                "INSERT INTO products (name, category_id, category_name, rating_average ,rating_review_count ,image_url) VALUES ($1, $2, $3, $4, $5, $6);",
-                "The Catcher in the Rye",
-                1,
-                "cat_prod",
-                0,
-                0,
-                "image url",
-            )
-            print("Inserted a single product.")
+            except Exception as e:
+                print(f"Error inserting into a table : ${e}")
 
-        except Exception as e:
-            print(f"Error inserting into a table : ${e}")
-
-        finally:
-            pass
+            finally:
+                pass
 
     except Exception as e:
         print(f"Exception: ${e}")
@@ -63,6 +66,7 @@ async def create_new_product():
     finally:
         if conn:
             await conn.close()
+
 
 async def get_all_products():
     global conn
@@ -74,10 +78,22 @@ async def get_all_products():
         # Fetch all rows
         rows = await conn.fetch("SELECT * FROM products;")
 
-        for row in rows:
-            print(f"id: {row['id']} | name: {row['name'][1:]}")
+        result = []
 
-        return rows
+        for row in rows:
+            result.append({
+                "id": row['id'],
+                "name": row['name'],
+                'description': row['description'],
+                'category_id': row['category_id'],
+                'category_name': row['category_name'],
+                'rating_average': row['rating_average'],
+                'rating_review_count': row['rating_review_count'],
+                'in_stock': row['in_stock'],
+                'image_url': row['image_url']
+            })
+
+        return result
 
     except Exception as e:
         print(f"DB connection error: {e}")
@@ -87,6 +103,7 @@ async def get_all_products():
         if conn:
             await conn.close()
 
+
 async def get_product_by_id(id):
     global conn
 
@@ -94,10 +111,22 @@ async def get_product_by_id(id):
         conn = await asyncpg.connect(CONN_STRING)
         print("Connection established")
 
-        row = await conn.fetchrow(f"SELECT * FROM products WHERE id = $1;", 1)
+        row = await conn.fetchrow(f"SELECT * FROM products WHERE id = $1;", id)
         print(row)
         print(f"id: {row['id']} | name: {row['name'][1:]}")
-        return row
+
+        result = {
+            "id": row['id'],
+            "name": row['name'],
+            'description': row['description'],
+            'category_id': row['category_id'],
+            'category_name': row['category_name'],
+            'rating_average': row['rating_average'],
+            'rating_review_count': row['rating_review_count'],
+            'in_stock': row['in_stock'],
+            'image_url': row['image_url']
+        }
+        return result
 
     except Exception as e:
         print(f"Exception: {e}")
@@ -107,6 +136,4 @@ async def get_product_by_id(id):
         if conn:
             await conn.close()
 
-
 # asyncio.run(create_new_product())
-# asyncio.run(get_all_products())
