@@ -1,3 +1,6 @@
+import random
+
+
 def format_product_data(product_data):
 
     result = {
@@ -20,3 +23,12 @@ def format_product_data(product_data):
     }
 
     return result
+
+
+def generate_order_number():
+    number = str(random.randint(1000, 99999))
+
+    if len(number) == 4:
+        number = '0' + number
+
+    return number
